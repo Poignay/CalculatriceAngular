@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="base">
+          <div class="ecranReponse">
+            <div class="ecranCalcul">{{ calculText }}</div>
+            {{ repText }}
+          </div>
+          <div class="clavier">
+            <table style="width: 100%;">
+              <tr>
+                <td class="touche toucheAC" colspan="3" (click)="Effacer()">AC</td>
+                <td class="touche toucheOperation" colspan="1" (click)="Clique('/')">/</td>
+              </tr>
+              <tr>
+                <td class="touche toucheNumero" (click)="Clique('7')">7</td>  
+                <td class="touche toucheNumero" (click)="Clique('8')">8</td>
+                <td class="touche toucheNumero" (click)="Clique('9')">9</td>  
+                <td class="touche toucheOperation" (click)="Clique('x')">x</td>
+              </tr>
+              <tr>
+                <td class="touche toucheNumero" (click)="Clique('4')">4</td>  
+                <td class="touche toucheNumero" (click)="Clique('5')">5</td>
+                <td class="touche toucheNumero" (click)="Clique('6')">6</td>  
+                <td class="touche toucheOperation" (click)="Clique('-')">-</td>
+              </tr>
+              <tr>
+                <td class="touche toucheNumero" (click)="Clique('3')">3</td>  
+                <td class="touche toucheNumero" (click)="Clique('2')">2</td>
+                <td class="touche toucheNumero" (click)="Clique('1')">1</td>  
+                <td class="touche toucheOperation" (click)="Clique('+')">+</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="touche toucheNumero" (click)="Clique('0')">0</td>
+                <td class="touche toucheNumero" (click)="Clique('.')">.</td>  
+                <td class="touche toucheEgale" (click)="Egale()">=</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
