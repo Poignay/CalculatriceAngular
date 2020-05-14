@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import Historique from '../historique/historique.model';
 
 @Component({
   selector: 'app-touche',
@@ -7,12 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToucheComponent implements OnInit {
  
+  @Input()
+  set calculHistorique(calculHistorique:Historique){
+    this.calculText = calculHistorique.calcul;
+    this.operand1 = calculHistorique.operan1;
+    this.operand2 = calculHistorique.operan2;
+    this.operateur = calculHistorique.operateur;
+    this.Egale()
+  }
+
+  @Output()
+  enrHistorique : EventEmitter<any> = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  calculText = '';
+  calculText="";
   repText = '';
   operand1: number;
   operand2: number;
@@ -76,5 +88,8 @@ export class ToucheComponent implements OnInit {
       this.calculText = 'Erreur: Opération invalide';
     }
     this.calculFini=true;
+    this.enrHistorique.emit(new Historique(this.calculText,this.operand1,this.operand2,this.operateur));
   }
+
+  
 }

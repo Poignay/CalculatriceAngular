@@ -1,1 +1,20 @@
-<app-touche></app-touche>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <app-touche
+                (enrHistorique)="enregistreCalcul($event)"
+                [calculHistorique]="calculHistorique"
+            ></app-touche>
+        </div>
+        <div class="col arf">
+            <h2>Historique</h2>
+            <app-historique  (change)="changeCalcul($event)"
+                    (supprime)="supprimeCalcul($event)"
+                    [historique]="a" 
+                    *ngFor="let a of historiques"></app-historique>
+        </div>
+    </div>
+    
+    
+</div>

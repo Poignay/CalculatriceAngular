@@ -1,0 +1,17 @@
+.lbl {
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: lightgrey;
+    
+}
+
+.lbl:hover{
+    opacity: 1;
+}
+
+.supprimer {
+    border: 1px solid red;
+    cursor: pointer;
+    background-color: red;
+    color : white;
+}

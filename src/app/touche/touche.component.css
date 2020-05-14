@@ -13,6 +13,7 @@
     text-align: right;
     font-family: Courier, monospace;
     overflow: auto;
+    width:100%
 }
 
 .ecranCalcul {
@@ -20,10 +21,12 @@
     height: 25%;
     font-size: 2rem;
     overflow: auto;
+    width:100%
 }
 
 .clavier {
     height: calc(200% / 3);
+    width:100%
 }
 
 .touche {

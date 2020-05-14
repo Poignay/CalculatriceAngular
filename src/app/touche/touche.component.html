@@ -1,14 +1,14 @@
-<div class="container">
-    <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
+<div class="container" style="width:100%">
+    <div class="row" style="width:100%">
+      <div class="col-md-15" style="width:100%"></div>
+      <div class="col-md-15" style="width:100%">
         <div class="base">
-          <div class="ecranReponse">
+          <div class="ecranReponse" >
             <div class="ecranCalcul">{{ calculText }}</div>
             {{ repText }}
           </div>
           <div class="clavier">
-            <table style="width: 100%;">
+            <table  style="width:100%">
               <tr>
                 <td class="touche toucheAC" colspan="3" (click)="Effacer()">AC</td>
                 <td class="touche toucheOperation" colspan="1" (click)="Clique('/')">/</td>
@@ -40,6 +40,5 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4"></div>
     </div>
   </div>
